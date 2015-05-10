@@ -1,6 +1,7 @@
 # plot2.R reads data from the  "Individual household electric power consumption Data Set"
 # from the UC Irvine Machine Learning Repository (http://archive.ics.uci.edu/ml/)
 # and creates a plot of global active power vs. time
+# png() defaults to 480x480 px
 
 # uncomment the next line if the dataset has not already been downloaded to local
 #download.file("http://d396qusza40orc.cloudfront.net/exdata%2Fdata%2Fhousehold_power_consumption.zip","household_power_consumption.zip")

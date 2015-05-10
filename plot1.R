@@ -1,6 +1,7 @@
 # plot1.R reads data from the  "Individual household electric power consumption Data Set"
 # from the UC Irvine Machine Learning Repository (http://archive.ics.uci.edu/ml/)
 # and creates a histogram of global active power 
+# png() defaults to 480x480 px
 
 download.file("http://d396qusza40orc.cloudfront.net/exdata%2Fdata%2Fhousehold_power_consumption.zip","household_power_consumption.zip")
 x <-read.csv2(unz("household_power_consumption.zip","household_power_consumption.txt"))
