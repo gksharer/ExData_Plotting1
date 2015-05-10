@@ -14,11 +14,19 @@ x$DateTime <- paste(x$Date,x$Time)
 x$DateTime <- as.POSIXct(x$DateTime)
 png(filename="plot4.png")
 par(mfcol=c(2,2))
+
+# plot 1
 with(x,plot(DateTime,Global_active_power,type="l",ylab="Global Active Power (kilwatts)",xlab=""))
+
+# plot 2
 with(x,plot(DateTime,Sub_metering_1,type="l",ylab="Energy sub metering",xlab=""))
 with(x,lines(DateTime,Sub_metering_2,col="red"))
 with(x,lines(DateTime,Sub_metering_3,col="blue"))
 legend("topright",c("Sub_metering_1","Sub_metering_2","Sub_metering_3"),lty=c(1,1,1),col=c("black","red","blue"))
+
+# plot 3
 with(x,plot(DateTime,Voltage,type="l",ylab="Voltage",xlab="datetime"))
+
+# plot 4
 with(x,plot(DateTime,Global_reactive_power,type="l",ylab="Global_reactive_power",xlab="datetime"))
 dev.off()
