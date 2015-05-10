@@ -1,4 +1,10 @@
-x <-read.csv2("household_power_consumption.txt")
+# plot3.R reads data from the  "Individual household electric power consumption Data Set"
+# from the UC Irvine Machine Learning Repository (http://archive.ics.uci.edu/ml/)
+# and creates a plot of energy sub metering vs. time
+
+# uncomment the next line if the dataset has not already been downloaded to local
+#download.file("http://d396qusza40orc.cloudfront.net/exdata%2Fdata%2Fhousehold_power_consumption.zip","household_power_consumption.zip")
+x <-read.csv2(unz("household_power_consumption.zip","household_power_consumption.txt"))
 x[x=="?"] <- NA
 x <- droplevels(x)
 x$Date <- as.Date(strptime(x$Date,format="%d/%m/%Y",tz="GMT"))
